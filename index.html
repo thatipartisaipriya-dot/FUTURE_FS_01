@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio</title>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:#020617;
+  color:white;
+  scroll-behavior:smooth;
+}
+
+/* Navbar */
+header{
+  display:flex;
+  justify-content:space-between;
+  padding:20px 80px;
+  position:sticky;
+  top:0;
+  background:#020617;
+  z-index:1000;
+}
+
+.logo{
+  font-size:24px;
+  color:#a855f7;
+  font-weight:bold;
+}
+
+nav a{
+  margin-left:25px;
+  text-decoration:none;
+  color:#ccc;
+  position:relative;
+}
+
+nav a::after{
+  content:"";
+  position:absolute;
+  width:0%;
+  height:2px;
+  background:#a855f7;
+  left:0;
+  bottom:-5px;
+  transition:0.3s;
+}
+
+nav a:hover::after{
+  width:100%;
+}
+
+/* Hero */
+.hero{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:80px;
+}
+
+.hero-text h1{
+  font-size:55px;
+}
+
+.hero-text span{
+  color:#a855f7;
+}
+
+.hero-text p{
+  margin:15px 0;
+  color:#aaa;
+  max-width:450px;
+}
+
+/* Social */
+.social i{
+  margin-right:15px;
+  font-size:18px;
+  padding:10px;
+  border:1px solid #333;
+  border-radius:8px;
+  cursor:pointer;
+  transition:0.3s;
+}
+.social i:hover{
+  background:#a855f7;
+  transform:scale(1.2);
+}
+
+/* Button */
+.btn{
+  margin-top:20px;
+  padding:12px 25px;
+  background:linear-gradient(45deg,#9333ea,#ec4899);
+  border:none;
+  border-radius:8px;
+  color:white;
+  cursor:pointer;
+  transition:0.3s;
+}
+.btn:hover{
+  transform:scale(1.05);
+}
+
+/* Sections */
+.section{
+  padding:70px 80px;
+}
+
+.title{
+  text-align:center;
+  margin-bottom:40px;
+  font-size:26px;
+}
+
+/* Cards */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:25px;
+}
+
+.card{
+  background:#0f172a;
+  padding:25px;
+  border-radius:12px;
+  border:1px solid #1e293b;
+  transition:0.3s;
+}
+.card:hover{
+  transform:translateY(-8px) scale(1.02);
+  border-color:#a855f7;
+}
+
+/* Skills */
+.skills{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+  gap:20px;
+}
+
+.skill{
+  background:#0f172a;
+  padding:20px;
+  border-radius:10px;
+  text-align:center;
+  transition:0.3s;
+}
+.skill:hover{
+  transform:scale(1.1);
+  background:#a855f7;
+}
+
+.skill i{
+  font-size:30px;
+  margin-bottom:10px;
+}
+
+/* Project link */
+.project-link{
+  color:#a855f7;
+  text-decoration:none;
+}
+
+/* Contact */
+input,textarea{
+  width:100%;
+  padding:12px;
+  margin:10px 0;
+  background:#0f172a;
+  border:none;
+  border-radius:6px;
+  color:white;
+}
+
+/* Footer */
+footer{
+  text-align:center;
+  padding:20px;
+  color:#aaa;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+  <div class="logo">Portfolio</div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- Hero -->
+<section id="home" class="hero">
+  <div class="hero-text">
+    <h3>Hello, I'm</h3>
+    <h1>Thatiparti<br><span>Sai Priya</span></h1>
+    <p>B.Tech CSE(AIML) Student passionate about building beautiful and functional web experiences.</p>
+
+    <div class="social">
+      <i class="fab fa-linkedin"></i>
+      <i class="fab fa-github"></i>
+      <i class="fab fa-instagram"></i>
+      <i class="fas fa-envelope"></i>
+    </div>
+
+    <button class="btn" onclick="downloadResume()">Download Resume</button>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about" class="section">
+  <h2 class="title">ABOUT ME</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Who Am I?</h3>
+      <p>I am a Computer Science student interested in Web Development, Problem Solving and AI/ML.</p>
+    </div>
+    <div class="card">
+      <h3>My Goals</h3>
+      <p>To become a skilled software developer and build impactful projects.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Skills -->
+<section id="skills" class="section">
+  <h2 class="title">MY SKILLS</h2>
+  <div class="skills">
+    <div class="skill"><i class="fab fa-html5"></i><p>HTML</p></div>
+    <div class="skill"><i class="fab fa-css3-alt"></i><p>CSS</p></div>
+    <div class="skill"><i class="fab fa-js"></i><p>JavaScript</p></div>
+    <div class="skill"><i class="fab fa-python"></i><p>Python</p></div>
+    <div class="skill"><i class="fas fa-code"></i><p>Problem Solving</p></div>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="section">
+  <h2 class="title">PROJECTS</h2>
+  <div class="cards">
+
+    <div class="card">
+      <h3>Portfolio Website</h3>
+      <p>Built using HTML, CSS, and JavaScript.</p>
+      <a href="#" class="project-link">View Project →</a>
+    </div>
+
+    <div class="card">
+      <h3>E Learning platforms</h3>
+      <p>Created a responce e-learning platform interface with design and better user interaction.</p>
+      <a href="#" class="project-link">View Project →</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="section">
+  <h2 class="title">CONTACT ME</h2>
+  <input type="text" placeholder="Your Name">
+  <input type="email" placeholder="Your Email">
+  <textarea rows="4" placeholder="Your Message"></textarea>
+  <button class="btn">Send Message</button>
+</section>
+
+<footer>
+   💜
+</footer>
+
+<script>
+function downloadResume(){
+  alert("Upload your resume and link it here!");
+}
+</script>
+
+</body>
+</html>
